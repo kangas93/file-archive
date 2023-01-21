@@ -22,4 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/backend/files/*
+/backend/files/*.pdf
+/backend/files/*.jpg
+/backend/files/*.jpeg
+/backend/files/*.xml
+/backend/files/*.json
