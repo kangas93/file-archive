@@ -66,7 +66,7 @@ const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 140 },
   {
     field: 'fileType', headerName: '', width: 70, renderCell: (params) => {
-      return (<img style={styles.fileIcon} src={getIcon(params.value)} />)
+      return (<img alt="Filetype" style={styles.fileIcon} src={getIcon(params.value)} />)
     }
   },
   { field: 'name', headerName: 'File', flex: 0.5 },

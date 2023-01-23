@@ -1,14 +1,50 @@
-# Getting Started with Create React App
+# Getting started
+
+This file-archive app has the following functionalites:
+
+- Uploading of jpg, xml and pdf files.
+- Listing of all uploaded files with metadata
+- Deletion of uploaded files
+- Downloading of uploaded files (click on file name)
+- Sorting of file listing
+- Rename file on upload
+
+The file listing shows at maximum 5 files at a time but the whole list is fetched at once. In other words, there is no pagination present. The file listing is saved in json file in the backend folder, its called "data.json".
+
+Main technologies used:
+- Express.js
+- JavaScript
+- React.js
+- TypeScript
+- Material UI
+- CSS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Prerequisites
+
+- NPM (works with v8.6.0)
+- Node (works with v18.0.0)
+
+## Installation
+
+Run `npm install` in the root directory to install all the dependencies. That should be it! Then start the backend server and front end app with the scripts below.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm run server`
+
+This runs the Express server in the backend folder.
+
+### `npm run watchServer`
+
+This runs the Express server with Nodemon and watches for file changes (needs Nodemon to be installed).
+
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the front end app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -21,7 +57,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the front end app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
