@@ -5,7 +5,7 @@ import xmlIcon from './assets/XML_file_icon2.svg'
 import { fetchFileList, uploadFile, downloadFile, deleteFile } from './utils/requests';
 import { DataGrid, GridCallbackDetails, GridCellParams, GridColDef, MuiEvent } from '@mui/x-data-grid';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { CircularProgress, Input, Button, TextField } from '@mui/material';
+import { CircularProgress, Button, TextField } from '@mui/material';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import download from 'downloadjs'
 
@@ -128,13 +128,13 @@ function App() {
     if (fileToUpload) {
       const data = new FormData();
       data.append('file', fileToUpload);
+      data.append('fileType', fileToUpload.type.split('/')[1])
       let author = document.getElementById("author") as HTMLInputElement;
       let description = document.getElementById("description") as HTMLInputElement;
       let newName = document.getElementById("newName") as HTMLInputElement;
       data.append('author', author.value)
       data.append('description', description.value)
       if (newName.value !== newName.defaultValue) data.append('newName', newName.value)
-      data.append('fileType', fileToUpload.type.split('/')[1])
       const uploaded = await uploadFile(data)
       if (uploaded) {
         let file = document.getElementById("file") as HTMLInputElement;
